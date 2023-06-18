@@ -5,7 +5,7 @@ from aiogram import Bot, types
 from dotenv import load_dotenv
 load_dotenv()
 
-CHANNEL_ID = -1001730788868
+CHANNEL_ID = os.getenv('CHANNEL_ID')
 
 bot = Bot(token=os.getenv('API_TOKEN'), parse_mode=types.ParseMode.HTML)
 reddit = asyncpraw.Reddit(client_id=os.getenv('CLIENT_ID'),
